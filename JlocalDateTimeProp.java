@@ -16,11 +16,7 @@ class JlocalDateTimeProp {
 
 	@Test
 	void CheckGreeting() throws IOException {
-		LocalDateTime now= LocalDateTime.now();
-		System.out.println("Before Formatting: " + now);
-		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-		String formatDateTime = now.format(format);
-		System.out.println("AfterFormatting: " + formatDateTime);
+	
 		
 		Properties p = new Properties();
 		
@@ -30,7 +26,6 @@ class JlocalDateTimeProp {
 		String ExpectedGreet = p.getProperty("ExpectedGreet");
 		System.out.println(ExpectedGreet);
 		String ExpectedGreeted = ExpectedGreet;
-		System.out.println("ExpectedGreet"+ExpectedGreet);
 		
 		String ActualGreeting = null;
 		int T= LocalTime.now().getHour();	
