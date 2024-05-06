@@ -10,7 +10,7 @@ import org.testng.Assert;
 
 public class Homepage {
 	boolean res;
-	String srch="aad";
+	
 	
 	static WebDriver driver;
 	//constructor
@@ -25,12 +25,12 @@ public class Homepage {
 	 
 	 
 	//methods
-	 public boolean checkboxispresent()
+	/* public boolean checkboxispresent()
 		{
 		
 		 try {
 			    
-			    WebElement serachbox=driver.findElement(By.id("autoComplete"));
+			    WebElement serachbox=driver.findElement(Searchbar);
 			    System.out.println(serachbox);
 			    res=true;
 			    }
@@ -45,7 +45,7 @@ public class Homepage {
 				return res;
 			
 		
-		}
+		}*/
 	 
 	 public void clickLense()
 		{
@@ -53,9 +53,10 @@ public class Homepage {
 		
 			
 		}
-	 public void entersearchword()
+	 public void entersearchword(String s)
 		{
-		 driver.findElement(Searchbar).sendKeys(srch + Keys.ENTER);
+		 driver.findElement(Searchbar).sendKeys(s+ Keys.ENTER);
+		
 			
 		}
 	 
@@ -69,7 +70,7 @@ public class Homepage {
 		    
 		    catch(NoSuchElementException e){
 		    	
-		    	System.out.println("No results found for "+ srch);
+		    	
 		    	res=false;
 		    	
 		    }
